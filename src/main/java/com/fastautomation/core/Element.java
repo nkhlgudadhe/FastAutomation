@@ -250,6 +250,14 @@ public class Element
 		return text;
 	}
 	
+	public String getValue() {
+		printStartLog();
+		Frame frame  = getContainerFrame();
+		String value = (String) frame.executeScript("return arguments[0].value;", getSeleniumWebElement());
+		printEndLog();
+		return value;
+	}
+	
 	public String getTagName()
 	{
 		printStartLog();

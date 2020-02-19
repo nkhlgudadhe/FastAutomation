@@ -32,3 +32,14 @@ function switchToBrowser(name) {
 	scenario.switchToBrowser(name);
 }
 
+function setCurrentBrowser(name) {
+	scenario.setCurrentBrowser(name);
+}
+
+function closeBrowser(name) {
+	scenario.closeBrowser(name);
+}
+
+function close() {
+	scenario.close();
+}

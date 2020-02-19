@@ -55,7 +55,7 @@ public class WebContext {
 		return getFailedStepInfoList().isEmpty();
 	}
 	
-	void setCurrentBrowser(String name) {
+	public void setCurrentBrowser(String name) {
 		browsers.put(name, browsers.remove(currentBrowserName));
 		currentBrowserName = name;
 	}
@@ -90,7 +90,12 @@ public class WebContext {
 	
 	@SuppressWarnings("unchecked")
 	public <T extends WebComponent> T getComponent(Class<T> cl) {
-		return (T) WebComponent.loadComponent(cl, getCurrentBrowser());
+		return (T) WebComponent.loadComponent(cl, getCurrentBrowser(), null, null);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T extends WebComponent> T getComponent(Class<T> cl,  Object[] args, Class<?>[] types) {
+		return (T) WebComponent.loadComponent(cl, getCurrentBrowser(), args, types);
 	}
 	
 	public StepInfo execute(String stepName, Map<String, String> map) {
