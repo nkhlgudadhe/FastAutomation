@@ -30,9 +30,6 @@ public class WebStarter {
 	Logger logger = new Logger("WebStarter");
 	
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver","C:\\Softwares\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver","D:\\Softwares\\geckodriver.exe");
-		System.setProperty("webdriver.edge.driver", "D:\\Softwares\\MicrosoftWebDriver.exe");
 		
 		WebStarter starter = new WebStarter();
 		starter.run(args);
