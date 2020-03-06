@@ -12,20 +12,22 @@ Fast Automation is selenium based webautomation for easy creation of webautomati
 
 # How to use
 Please refer FastAutomationTest to check sample code for use cases .
-1) Create WebComponents
-		Create  Custom WebComponents for Page or for logical sections in the web page .
-		e.g. Page Component -> MathOperationPage
+1) Create WebComponents<br/>
+		Create  Custom WebComponents for Page or for logical sections in the web page .<br/>
+		e.g. Page Component -> MathOperationPage<br/>
 		     Sectional component in page -> AddiationPanel, SubstarctionPanel, OperationPanel etc.
-2) Create Scenario Steps
-		Create scenario steps to test web page and different sections in it .
-		e.g. MathScenarioSteps annotated with @ScenarioConetxt and provided scenario name as "MathScenario"
+2) Create Scenario Steps<br/>
+		Create scenario steps to test web page and different sections in it .<br/>
+		e.g. MathScenarioSteps annotated with @ScenarioConetxt and provided scenario name as "MathScenario"<br/>
 		     Above class has multiple methods annotated with @Step in nothing but scenario steps to test each components in the page.
 		      
-3) Create Test Scenario
-		To call above created steps in proper flow by passing custom inputs , create Scenario.js 
+3) Create Test Scenario<br/>
+		To call above created steps in proper flow by passing custom inputs , create Scenario.js <br/>
 
-4) Run Scenario 
-		Run above scenario by running com.fastautomation.components.WebStarter by passing following arguments
+4) Run Scenario <br/>
+
+		Run above scenario by running com.fastautomation.components.WebStarter by passing following arguments. <br/>
+		
 		-browser browser -scenario scenario -url url  [-max_wait max_wait]
 		where
 		 -browser <arg>    target browser among (Chrome, FireFox, Edge)
@@ -33,8 +35,8 @@ Please refer FastAutomationTest to check sample code for use cases .
 		 -output <arg>     output folder for html logs
 		 -scenario <arg>   Scenario.js file path
 		 -url <arg>        starting url
-		
-		Also need to pass following jvm argument for target browser type :
+
+		Also need to pass following jvm argument for target browser type
 		For Chrome : -Dwebdriver.chrome.driver=<chromedriver.exe path>
 		For Firefox : -Dwebdriver.gecko.driver=<geckodriver.exe path>
 		For Edge :    -Dwebdriver.edge.driver=<MicrosoftWebDriver.exe path>
